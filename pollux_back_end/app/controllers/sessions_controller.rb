@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
 
 
     def login_as(user)
-        token = encode(user.id, user.email, user_type)
+        token = encode(user.id, user.email)
         render json: { userId: user.id, userName: "#{user.first_name} #{user.last_name}", email: user.email,
                         phone_number: user.phone_number, token: token}, status: :ok
       end

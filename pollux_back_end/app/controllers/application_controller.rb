@@ -56,7 +56,7 @@ class ApplicationController < ActionController::API
     nil
   end
 
-    def user_global_params
+    def user_params_global
         params.permit(:username, :first_name, :last_name, :email, :phone_number, :password)
     end
 
