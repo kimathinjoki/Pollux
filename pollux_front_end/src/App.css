@@ -1,4 +1,46 @@
 .App {
   text-align: center;
   margin: auto;
+  color: white;
+}
+
+#app-container {
+  background-color: #212226;
+  height: 100vh;
+}
+
+#nav-logo {
+  width: 33%;
+  min-height: 100%;
+  text-align: center;
+  padding-top: 10px;
+}
+
+#logo-img {
+  height:100px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.pollux-nav {
+  height: 120px;
+  vertical-align: center;
+  padding-top: 0px;
+  background-color: #f14666;
+  margin-bottom: 50px;
+}
+
+#pollux-nav {
+  padding-top: 10;
+  padding: 0;
+}
+
+.pollux-table {
+  width: 50%;
+  padding: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffcdaa;
+  border-radius: 20px;
+  color: #805e46;
 }

@@ -7,18 +7,20 @@ function Groups() {
     const rows = [];
     for (var i = 0; i < numRows; i++) {
         rows.push(<tr>
-                <td>
+            <td>
+                <h1>
                     {groupNames[i]}
-                </td>
-                <td>
-                    <p>Description P1</p>
-                    <p>Description P2</p>
-                </td>
-            </tr>);
+                </h1>
+            </td>
+            <td>
+                <p>Description P1</p>
+                <p>Description P2</p>
+            </td>
+        </tr>);
     }
 
     return (
-        <table>
+        <table class="pollux-table">
             {rows}
         </table>
     );
