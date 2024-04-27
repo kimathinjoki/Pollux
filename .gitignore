@@ -5,29 +5,33 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore bundler config.
-/.bundle
+/pollux_back_end/.bundle
 
 # Ignore the default SQLite database.
-/db/*.sqlite3
-/db/*.sqlite3-*
+/pollux_back_end/db/*.sqlite3
+/pollux_back_end/db/*.sqlite3-*
 
 # Ignore all logfiles and tempfiles.
-/log/*
-/tmp/*
-!/log/.keep
-!/tmp/.keep
+/pollux_back_end/log/*
+/pollux_back_end/tmp/*
+!/pollux_back_end/log/.keep
+!/pollux_back_end/tmp/.keep
 
 # Ignore pidfiles, but keep the directory.
-/tmp/pids/*
-!/tmp/pids/
-!/tmp/pids/.keep
+/pollux_back_end/tmp/pids/*
+!/pollux_back_end/tmp/pids/
+!/pollux_back_end/tmp/pids/.keep
 
 # Ignore uploaded files in development.
-/storage/*
-!/storage/.keep
-/tmp/storage/*
-!/tmp/storage/
-!/tmp/storage/.keep
+/pollux_back_end/storage/*
+!/pollux_back_end/storage/.keep
+/pollux_back_end/tmp/storage/*
+!/pollux_back_end/tmp/storage/
+!/pollux_back_end/tmp/storage/.keep
+
+/pollux_back_end/tmp/cache/*
+# /pollux_back_end/tmp/cache/bootsnap/*
+/pollux_back_end/log
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
@@ -42,23 +46,24 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
-/.pnp
-.pnp.js
+/pollux_front_end/node_modules
+/pollux_front_end/.pnp
+/pollux_front_end/.pnp.js
 
 # testing
-/coverage
+/pollux_front_end/coverage
 
 # production
-/build
+/pollux_front_end/build
 
 # misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+/pollux_front_end/.DS_Store
+/pollux_front_end/.env.local
+/pollux_front_end/.env.development.local
+/pollux_front_end/.env.test.local
+/pollux_front_end/.env.production.local
 
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
