@@ -10,7 +10,50 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_04_27_182350) do
+ActiveRecord::Schema[7.0].define(version: 2024_04_27_234812) do
+  create_table "activities", force: :cascade do |t|
+    t.string "name"
+    t.integer "created_by"
+    t.string "start_date"
+    t.string "end_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "contributions", force: :cascade do |t|
+    t.string "participant_id"
+    t.string "activity_id"
+    t.decimal "amount"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "expenses", force: :cascade do |t|
+    t.string "description"
+    t.decimal "expense_amount"
+    t.integer "paid_by"
+    t.integer "split_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "participants", force: :cascade do |t|
+    t.integer "activity_id"
+    t.integer "user_id"
+    t.decimal "paid_amount"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "settlements", force: :cascade do |t|
+    t.integer "from_user"
+    t.integer "to_user"
+    t.integer "activity_id"
+    t.decimal "settlement_amount"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "first_name"
