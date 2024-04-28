@@ -1,7 +1,8 @@
 import './App.css';
-import Nav from './lib/Nav';
-import Landing from './routes/Landing';
-import Groups from './routes/Groups';
+import Nav from './components/Nav';
+import Landing from './components/Landing';
+import Groups from './components/Groups';
+import NewGroupForm from './components/NewGroupForm';
 import 'bootstrap/dist/css/bootstrap.css';
 import {
   BrowserRouter as Router,
@@ -11,14 +12,15 @@ import {
 
 function App() {
   return (
-      <body>
-        <div className="App" class="container-fluid">
+      <body id="app-container">
+        <div className="App">
         
           <Nav />
 
           <Routes>
             <Route path="/" element={<Landing />} />
             <Route path="/groups" element={<Groups />} />
+            <Route path="/newgroup" element={<NewGroupForm />} />
           </Routes>
 
         </div>
