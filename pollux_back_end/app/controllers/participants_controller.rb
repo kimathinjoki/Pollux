@@ -14,7 +14,7 @@ class ParticipantsController < ApplicationController
   end
 
   # POST /participants
-  def create
+  def add_participants
     @participant = Participant.new(participant_params)
 
     if @participant.save

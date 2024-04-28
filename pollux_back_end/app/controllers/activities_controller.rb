@@ -14,14 +14,17 @@ class ActivitiesController < ApplicationController
   end
 
   # POST /activities
-  def create
+  def create_activity
     @activity = Activity.new(activity_params)
-
     if @activity.save
       render json: @activity, status: :created, location: @activity
     else
       render json: @activity.errors, status: :unprocessable_entity
     end
+  end
+
+  def calculate_contributions
+    
   end
 
   # PATCH/PUT /activities/1
